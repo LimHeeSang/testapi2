@@ -14,6 +14,7 @@ public class MemberController {
 
     private final MemberService memberService;
 
+    @CrossOrigin(origins = "*")
     @PostMapping("/test/member")
     @ResponseBody
     public String memberAdd(@RequestBody MemberForm memberForm) {
@@ -27,6 +28,7 @@ public class MemberController {
         return "ok";
     }
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/test/member")
     @ResponseBody
     public Member findMember(@RequestParam String name) {
